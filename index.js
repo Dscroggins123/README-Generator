@@ -1,6 +1,7 @@
 const markdownGenerator = require("./utils/generateMarkdown")
 let fs = require("fs")
-const inquirer = require("inquirer") // array of questions for user
+const inquirer = require("inquirer"); // array of questions for user
+const generateMarkdown = require("./utils/generateMarkdown");
 const questions = [
     {"message": "What is your project Title? ", name:"Title" },
     {"message": "What is your project about?  ", name:"Description" },
@@ -28,23 +29,26 @@ choices:[
 ];
 inquirer.prompt(questions)
 .then(function(response){
-let data = `# ${response.Title}
-## Description 
-${response.Description}
-## Table of Content
-* ${response.TableOfContents.join("\n")}
-## Installation
-${response.Installation}
-## Usage
-${response.Usage}
-# ${response.Licenses}
-## Contributions
-${response.Contributions}
-## Test
-## Questions 
-* [Github:](https://github.com/${response.Question})
-${response.emailAddress}
-`
+// let data = `# ${response.Title}
+// ## Description 
+// ${response.Description}
+// ## Table of Content
+// * ${response.TableOfContents.join("\n")}
+// ## Installation
+// ${response.Installation}
+// ## Usage
+// ${response.Usage}
+// ${response.Licenses}
+// ## Contributions
+// ${response.Contributions}
+// ## Test
+// ## Questions 
+// * 
+// [Github:](https://github.com/${response.Question})
+// ${response.emailAddress}
+// `
+
+const data = generateMarkdown(response)
 writeToFile("README.md", data)
 })
 
