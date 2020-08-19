@@ -40,7 +40,7 @@ THEN I am taken to the corresponding section of the README
 
 ## Minimum Application Requirements
 
-* Meets [Submission Requirements](#submission-requirements) in the following section.
+* Meets [Submission Requirements](#user-story) in the following section.
 
 * Functional application.
 

@@ -1,4 +1,4 @@
-
+const markdownGenerator = require("./utils/generateMarkdown")
 let fs = require("fs")
 const inquirer = require("inquirer") // array of questions for user
 const questions = [
@@ -45,12 +45,13 @@ ${response.Contributions}
 * [Github:](https://github.com/${response.Question})
 ${response.emailAddress}
 `
-
+writeToFile("README.md", data)
 })
-function writeToFile(fileName, data) {
+
+function writeToFile(READMEmd, data) {
+    fs.writeFile(READMEmd, data, ()=> {})
     
-    
-}
+};
 
 // function to initialize program
 function init() {
@@ -58,4 +59,5 @@ function init() {
 }
 
 // function call to initialize program
+
 init();
