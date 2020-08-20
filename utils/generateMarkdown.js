@@ -4,7 +4,7 @@ function generateMarkdown(response) {
   ## Description 
   ${response.Description}
   ## Table of Content
-  * ${response.TableOfContents.join("\n")}
+  * [](#${response.TableOfContents.join(") \r * [](#")})
   ## Installation
   ${response.Installation}
   ## Usage
@@ -14,7 +14,6 @@ function generateMarkdown(response) {
   ${response.Contributions}
   ## Test
   ## Questions 
-  * 
   [Github:](https://github.com/${response.Question})
   ${response.emailAddress}
   `
