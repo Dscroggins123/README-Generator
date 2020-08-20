@@ -10,9 +10,9 @@ function generateMarkdown(response) {
   ## Usage
   ${response.Usage}
   
-  ## Contributions
+  ## Contributing
   ${response.Contributions}
-  ## Test
+  ## Tests
   ## Questions 
   [Github:](https://github.com/${response.Question})
   ${response.emailAddress}
