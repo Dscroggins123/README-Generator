@@ -2,12 +2,12 @@
   ## Description 
   This project is about generating READ MEs dynamically and efficiently for our Project repositories.It uses various npm packages including inquirer and fs to help assist with its functionality.This app is used through the terminal and runs through node. Users are shown various questions that they must fill with information on their specific project so that a custom README.md file will be generated for them
   ## Table of Content
-  * [](#Installation) 
- * [](#Usage) 
- * [](#License) 
- * [](#Contributing) 
- * [](#Tests) 
- * [](#Questions)
+  * [Installation](#Installation) 
+ * [Usage](#Usage) 
+ * [License](#License) 
+ * [Contributing](#Contributing) 
+ * [Tests](#Tests) 
+ * [Questions](#Questions)
   ## Installation
   Run the npm init and npm install functions in terminal to get the proper packages to run the app.
   ## Usage
